@@ -1,0 +1,80 @@
+修饰符分为两种：访问权限控制、其他方面(static abstract final)
+	关于访问控制权限：分为四个scope
+		1.同一个类中  2.同一个包内  3.不同包的子类  4.不同包的所有类
+
+一.变量的修饰符
+	变量分为类变量(属性)，和方法变量。方法变量都用final(隐式)进行修饰,所有这里的变量特指类变量
+	访问权限控制方面 :private protected public
+	eg：PrivilegeField,PrivilegeFieldTest,PrivilegeFieldSub,PrivilegeFieldInfo
+		
+		private String privateInfo;
+		//同类中可访问，同一个包中可访问
+		String defaultInfo;
+		//同类中可访问，同一个包中可访问，不同包的sub类可访问（通过父类对象依然不能访问，只能通过子类对象）
+		protected String protectedInfo;
+		//所有地方都可访问
+		public String publicInfo;
+	其他控制方面：static final
+		final 表示此变量不能被改变，相当于常量
+	
+二.普通方法的修饰符
+	访问权限控制方面 :private default protected public, 与变量相同
+    eg：PrivilegeMethod,PrivilegeMethodTest,PrivilegeMethodSub,PrivilegeMethodInfo
+    	//所有地方都可访问
+	    public void printPublic() {
+	        System.out.println("public method");
+	    }
+	    //同类中可访问，同一个包中可访问，不同包的sub类可访问（通过父类对象依然不能访问，只能通过子类对象）
+	    protected void printProtected() {
+	        System.out.println("protected method");
+	    }
+	    //同类中可访问，同一个包中可访问
+	    void printDefault() {
+	        System.out.println("default method");
+	    }
+	    
+	    //同类中可访问
+	    private void printPrivate() {
+	        System.out.println("private method");
+	    }
+	 其他控制方面：static final abstract
+	 	final修饰的方法表示此方法不能被子类覆写,abstract修饰的方法则一定会被子类覆写
+
+三.构造方法修饰符
+	只有权限控制方面：private default protected public，与变量,方法相同
+		public TestA(){
+
+	    }
+	    protected TestA(int i){
+	
+	    }
+	    private TestA(int i,int j){
+	
+	    }
+	    TestA(String string){
+	
+	    }
+	其中的private构造方法，在单例设计模式中经常被使用
+
+四.类的修饰符
+	权限控制方面：public 默认(defalut) 
+	eg：PrivilegeClass PrivilegeClassTest
+	
+	其他控制方面：final abstract
+		final声明的class不能被继承
+
+五.interface
+	权限控制方面：public 默认(defalut) 与类相同
+
+接口中的变量 ：public static final
+           
+接口中的抽象方法：public abstract 
+java1.8之后
+接口中的static方法：static 
+接口中的default方法：default 
+
+
+参照：
+https://blog.csdn.net/qiumengchen12/article/details/44939929
+https://blog.csdn.net/blacktal/article/details/81198579
+	

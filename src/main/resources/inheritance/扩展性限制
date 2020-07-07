@@ -1,0 +1,15 @@
+1.一个类只能扩展一个类 (单继承局限)
+	class C extends A,B 这种操作不被允许
+	
+2.允许多层扩展(层数最好不要超过3层)
+	class B extends A
+	class C extends B
+
+3.extends 对于私有操作(private)定义的操作，是属于隐式扩展，而对于非私有操作，是属于显示扩展
+  eg：TestMessageExtend
+  
+4.子类对象在进行实例化的时候，会先调用被扩展类的构造方法(super)，再调用本类的构造，意味着此时会实例化两个对象
+	eg：TestConstructorInExtend
+
+5.如果父类没有无参构造方法，那么需要显示的写出super(若干参数的形式)，进行被扩展类构造方法的调用
+	eg：TestConstructorInExtend2

@@ -1,0 +1,8 @@
+1.问题的引出，为什么需要扩展性
+	如果现在定义Person、Student两个类，Student除了定义自己的属性以外，也定义Person的特性，那么此时会产生代码的重用。
+	
+2.Person代表一种公共类型，Student代表一种特有类型，Students 可以在Person的基础上继续扩充功能。
+
+总结：
+	1.inheritance 在已有功能的基础上继续扩充(extends)功能。subclass 拥有 superclass 的所有属性以及方法
+	2.superclass 的属性和方法可以被多个subclass extends,这样就实现了代码的重用

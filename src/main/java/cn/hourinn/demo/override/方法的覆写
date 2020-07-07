@@ -1,0 +1,21 @@
+1.什么时候发生方法覆写的情况
+     在普通类的subclass、抽象类的subclass、interface的实现类中会发生方法覆写
+     其中后两者是强制执行。
+	
+2.如果superclass的方法被覆写 ，那么subclass在调用该方法的时候，会调用被覆写后的方法
+ 	 如果要想继续调用superclass中的方法，那么必须采用super.xxx()的形式
+
+3.覆写的规则
+    1.被覆写的方法在 方法名称、方法参数类型以及个数、返回值上与superclass中的该方法完全一致 eg：TestOverride
+	2.subclass所覆写的方法不能拥有比superclass中该方法更严格的访问控制权限  eg：TestOverridePrivilige
+	     ※如果subclass被private修饰的方法，如果被覆写，相当于在subclass中定义一个新的方法
+	
+	
+4.为什么要方法覆写
+	1.对于普通类，如果其subclass发现自己的方法功能不足，但是又必须使用这个方法名称，那么这个时候就需要覆写
+	2.对于抽象类和接口，强制执行。
+
+5.方法 ：overload(重载)与override(覆写)的区别
+  1.overload 只是对于一个类而言，方法的名称相同即可
+  2.override 是存在于superclass之中，对于多个类而言，而且要求方法的方法名称、方法参数类型以及个数、返回值完全相同
+  3.overload 没有访问控制权限的限制，而override有限制（参照覆写的规则 2.)

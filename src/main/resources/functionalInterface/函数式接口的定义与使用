@@ -1,17 +1,17 @@
-1.从JDK1.8之后,有了函数式接口(functional interface)这一概念
+1.c从JDK1.8之后,有了函数式接口(functional interface)这一概念
 
 特征：这类接口必须且只能定义一个抽象方法(functional method )，可以通过lamda表达式和方法引用实现,
 而lamda表达式就是函数式写法，所以称为“函数式”接口。
 
 在jdk1.8之后，在java.util.function包下定义五个个关键的函数型接口
 	1.Interface Function<T,R>    
-		R apply(T t)      //接受一个参数并且返回值
+		R apply(T t)      //c接受一个参数并且返回值
 	2.Interface Consumer<T>
-		void accept(T t)  //接收一个参数不返回值
+		void accept(T t)  //c接收一个参数不返回值
 	3.Interface Supplier<T>
-		T get()           //不接收参数但返回值
+		T get()           //c不接收参数但返回值
 	4.Interface Predicate<T>
-		boolean test(T t) //判断给定的断言是否正确
+		boolean test(T t) //c判断给定的断言是否正确
 
 example：TestFunctionalInterface.java
 

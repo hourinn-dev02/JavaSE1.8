@@ -1,0 +1,15 @@
+1.两种级别的访问控制符
+	.At the top : level—public, or package-private (no explicit modifier).
+	.At the member : level—public, private, protected, or package-private (no explicit modifier).
+	
+2.本次重点 member level
+	eg. cn.hourinn.demo.access_modifiers.one .cn.hourinn.demo.access_modifiers.two
+	    access_levels.png,classical_example_01.png,classical_example_02.png
+
+3.如何选择访问控制级别的建议
+	.成员变量用private，除非有特定原因不这么做
+	
+4.关于 top level
+	用来修饰class:public 表示对所有的class都可见; no modifier：同一个包的class才可见
+	※相对于member level简单很多
+		    

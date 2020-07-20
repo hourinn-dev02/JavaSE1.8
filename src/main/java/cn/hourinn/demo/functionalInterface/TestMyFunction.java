@@ -1,7 +1,5 @@
 package cn.hourinn.demo.functionalInterface;
 
-import static org.junit.Assert.*;
-
 import org.junit.Test;
 
 public class TestMyFunction {

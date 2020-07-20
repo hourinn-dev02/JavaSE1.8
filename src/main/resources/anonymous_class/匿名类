@@ -1,0 +1,46 @@
+1.为什么会有anonymous class?它的作用是什么?
+	1.首先anonymous class的可以声明一个类同时实例化该类对象,最终的结果而言是得到一个对象.
+	而local class是先声明类,再实例化对象。所有两者本质上一样。
+	2.当只需要使用local class 一次的时候(需要一个实例化对象) ,anonymous class的方式就显得简洁.
+	当然如果需要使用local class 多次时(需要多个实例化对象).还是local class的方式更简洁
+	
+	class SomeClass implements SomeInterface {
+		接口方法覆写语句...
+	}
+	SomeClass obj = new SomeClass();
+	等价于:
+	SomeInterface obj = new SomeInterface() {
+		接口方法覆写语句...
+	}
+
+2.anonymous class 本质是 local class ,不同的是anonymous class 必须是某接口的实现类,或者某父类的子类,而local class 可以是独立的类
+	eg 实现类: GreatingApp.java 子类: GreatingApp2.java
+
+3.anonymous class 定义语法
+	1.The new operator
+	2.The name of an interface to implement or a class to extend.  
+	3.Parentheses that contain the arguments to a constructor, just like a normal class instance creation expression. 
+		Note: When you implement an interface, there is no constructor, so you use an empty pair of parentheses.
+	4.A body, which is a class declaration body.
+	
+4.和 local class 一样,anonymous class有一些使用限制
+
+	1.Like local classes, anonymous classes can capture variables; they have the same access to local variables of the enclosing scope:
+	
+		An anonymous class has access to the members of its enclosing class.
+		An anonymous class cannot access local variables in its enclosing scope that are not declared as final or effectively final.
+		Like a nested class, a declaration of a type (such as a variable) in an anonymous class shadows any other declarations in the enclosing scope that have the same name. See Shadowing for more information.
+		
+	2.Anonymous classes also have the same restrictions as local classes with respect to their members:
+	
+		You cannot declare static initializers or member interfaces in an anonymous class.
+		An anonymous class can have static members provided that they are constant variables.
+	
+	3.Note that you can declare the following in anonymous classes:
+	
+		Fields
+		Extra methods (even if they do not implement any methods of the supertype)
+		Instance initializers
+		Local classes
+	
+	However, you cannot declare constructors in an anonymous class.

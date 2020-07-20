@@ -1,0 +1,21 @@
+1.什么是local class?
+	可以定义在任意在block中,比如for循环,if 语句块,方法体中(最常见).
+	
+2.既然是定义在block中,那么肯定会有一些限制条件
+	1.local class 可以访问 local variable,被访问的local variable也被称为 captured variable
+	既然被captured ,所以必须声明为final,即变成不可改变的常量
+		eg.LocalClassExample 的 validatePhoneNumber方法的 numberLength变量
+		
+	※java1.8之后,captured variable 可以不用被final声明,但是必须保证这个变量初始化后值不被改变,即effectively final
+	如果改变,则报错 ： Local variable numberLength defined in an enclosing scope must be final or effectively final
+	
+	2.local class 不能有静态元素,即non-static ,因为local class 能访问外部的成员属性和方法,eg.LocalClassExample2 的 regularExression变量,而这些成员属性和方法必须由实例对象进行调用。
+	(Local classes are non-static because they have access to instance members of the enclosing block. Consequently, they cannot contain most kinds of static declarations.)
+	eg.LocalClassExample 的 PhoneNumber local class 的 fun()方法
+	
+	3.local class 可以拥有静态常量,即static final 声明的变量
+	eg.LocalClassExample2 的 regularExression
+	
+	
+
+参考：https://docs.oracle.com/javase/tutorial/java/javaOO/localclasses.html

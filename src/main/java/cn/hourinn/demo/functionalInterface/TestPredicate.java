@@ -1,11 +1,8 @@
 package cn.hourinn.demo.functionalInterface;
 
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.function.Predicate;
-
 
 //测试函数
 public class TestPredicate {

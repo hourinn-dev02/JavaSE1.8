@@ -1,0 +1,19 @@
+The Java programming language defines the following kinds of variables
+	.Instance Variables(Non-Static Fields)
+	.Class Variables(Static Fields)
+	.Local Variables - a method will often store its temporary state in local variables.
+	.Parameters
+
+The rules and conventions for naming variables:
+	. A variable's name can be any legal identifier — an unlimited-length sequence of Unicode letters and digits
+	. The convention is to always begin your variable names with a letter,not "$" or "_".
+		Additionally, the dollar sign character, by convention, is never used at all. 
+	.Subsequent characters may be letters, digits, dollar signs, or underscore characters.
+	.use full words instead of cryptic abbreviations,make your code easier to read and understand.
+	.keep in mind that the name you choose must not be a keyword or reserved word.
+	.If the name you choose consists of only one word, spell that word in all lowercase letters.
+	 	If it consists of more than one word, capitalize the first letter of each subsequent word
+	.If your variable stores a constant value, such as static final int NUM_GEARS = 6
+		the convention,capitalizing every letter and separating subsequent words with the underscore character. 
+		By convention, the underscore character is never used elsewhere.
+	

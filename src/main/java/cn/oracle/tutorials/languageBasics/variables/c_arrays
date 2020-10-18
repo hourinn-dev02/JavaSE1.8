@@ -1,0 +1,4 @@
+Arrays
+
+1.The lenght of an array is established when the array is created,After creation ,its length is fixed.
+2.create and initialize an array(such as int[] anArray = {1,2,3},for example);

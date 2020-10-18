@@ -1,0 +1,10 @@
+There are several kinds of variables:
+	1.Member variables in a class—these are called fields.
+	2.Variables in a method or block of code—these are called local variables.
+	3.Variables in method declarations—these are called parameters.
+	
+Field declarations are composed of three components, in order:
+	1.Zero or more modifiers, such as public or private.
+	2.The field's type.
+	3.The field's name.
+

@@ -1,0 +1,26 @@
+Once you've created an object, you probably want to use it for something. You may need to use the value of one of its fields, 
+	change one of its fields, or call one of its methods to perform an action.
+
+1.Referencing an Object's Fields
+	Code that is outside the object's class must use an object reference or expression, followed by the dot (.) operator, followed by a simple field name
+		reference : objectReference.fieldName
+		expression : new Rectangle().height
+		*The object is unreferenced, and its resources are free to be recycled by the Java Virtual Machine.
+
+
+2.Calling an Object's Methods
+
+	
+3.The Garbage Collector
+	Some object-oriented languages require that you keep track of all the objects you create and that you explicitly destroy them when they are no longer needed. 
+	Managing memory explicitly is tedious and error-prone. The Java platform allows you to create as many objects as you want (limited, of course, by what your system can handle), 
+	and you don't have to worry about destroying them. The Java runtime environment deletes objects when it determines that they are no longer being used. This process is called garbage collection.
+
+	An object is eligible for garbage collection when there are no more references to that object. 
+	References that are held in a variable are usually dropped when the variable goes out of scope. 
+	
+	Or, you can explicitly drop an object reference by setting the variable to the special value null. 
+	Remember that a program can have multiple references to the same object; all references to an object must be dropped before the object is eligible for garbage collection.
+
+	The Java runtime environment has a garbage collector that periodically frees the memory used by objects that are no longer referenced. 
+	The garbage collector does its job automatically when it determines that the time is right.

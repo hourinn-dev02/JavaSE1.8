@@ -1,0 +1,8 @@
+this is a reference to the current object — the object whose method or constructor is being called.
+The most common reason for using the this keyword is because a field is shadowed by a method or constructor parameter.
+
+
+Using this with a Constructor
+
+From within a constructor, you can also use the this keyword to call another constructor in the same class. 
+	

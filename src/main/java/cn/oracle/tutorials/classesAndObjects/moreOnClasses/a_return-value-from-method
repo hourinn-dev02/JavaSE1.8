@@ -1,0 +1,13 @@
+A method returns to the code that invoked it when it
+	1.completes all the statements in the method,
+	2.reaches a return statement, or
+	3.throws an exception (covered later)
+	
+	*Any method declared void doesn't return a value. It does not need to contain a return statement, but it may do so.  like this:
+		return;
+
+		
+Returning a Class or Interface
+	*the returned object could be a subclass of the return type
+	*You also can use interface names as return types. In this case, the object returned must implement the specified interface.
+	

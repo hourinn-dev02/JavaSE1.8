@@ -16,7 +16,7 @@ public class AlphaSub extends Alpha {
 		super.methodMemberD();
 	}
 	
-	/*在该类包外的子类中能“看到“的只是子类自己继承来的protected 方法和属性，它是不能“看到“它的父类对象的protected方法和属性的。
+	/*c在该类包外的子类中能“看到“的只是子类自己继承来的protected 方法和属性，它是不能“看到“它的父类对象的protected方法和属性的。
 		也就是说你可以new 子类然后子类对象.protected属性..但是这样实际上访问的是子类继承来的属性..并不是父类的属性。*/
 	public  void print1() {
 		

@@ -1,0 +1,31 @@
+Controlling Access to Members of a Class
+
+	1.Access level modifiers determine whether other classes can use a particular field or invoke a particular method. two levels of access control:
+		.At the top level—public, or package-private (no explicit modifier).
+		.At the member level—public, private, protected, or package-private (no explicit modifier).
+	2.Access Levels of the member level
+	
+	        ----------|--------|-------|---------|-----------
+			Modifier  |	Class  |Package|Subclass |	World
+			----------|--------|-------|---------|-----------
+			public	  |	  Y	   |	Y  |	Y	 |	Y
+			----------|--------|-------|---------|-----------
+			protected |	  Y	   |	Y  |	Y	 |	N
+			----------|--------|-------|---------|-----------
+			no modifier	  Y	   |	Y  |	N	 |	N
+			----------|--------|-------|---------|-----------
+			private	  |	  Y	   |	N  |	N	 |	N
+			
+			
+			
+			----------|--------|-------|---------|-----------
+			Modifier  |	Alpha  |  Beta |Alphasub |	Gamma
+			----------|--------|-------|---------|-----------
+			public	  |	  Y	   |	Y  |	Y	 |	Y
+			----------|--------|-------|---------|-----------
+			protected |	  Y	   |	Y  |	Y	 |	N
+			----------|--------|-------|---------|-----------
+			no modifier	  Y	   |	Y  |	N	 |	N
+			----------|--------|-------|---------|-----------
+			private	  |	  Y	   |	N  |	N	 |	N
+			

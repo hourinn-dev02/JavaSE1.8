@@ -1,0 +1,30 @@
+1.Class Variables
+	Fields that have the static modifier in their declaration are called static fields or class variables.which is in one fixed location in memory
+	Any object can change the value of a class variable, but class variables can also be manipulated without creating an instance of the class.
+		*Class variables are referenced by the class name itself, as in
+			Bicycle.numberOfBicycles
+		*You can also refer to static fields with an object reference like
+			myBike.numberOfBicycles
+		 but this is discouraged because it does not make it clear that they are class variables.
+		 
+2.Class Methods
+	The Java programming language supports static methods as well as static variables. Static methods, which have the static modifier in their declarations
+		*You can also refer to static methods with an object reference like
+			instanceName.methodName(args)
+		 but this is discouraged because it does not make it clear that they are class methods.
+	
+	A common use for static methods is to access static fields. 
+	For example, we could add a static method to the Bicycle class to access the numberOfBicycles static field
+	
+	*Class methods cannot access instance variables or instance methods directly—they must use an object reference. 
+		Also, class methods cannot use the this keyword as there is no instance for this to refer to.
+		
+3.The static modifier, in combination with the final modifier, is also used to define constants. 
+	The final modifier indicates that the value of this field cannot change.
+	
+	* If a primitive type or a string is defined as a constant and the value is known at compile time, 
+	the compiler replaces the constant name everywhere in the code with its value. This is called a compile-time constant. 
+	If the value of the constant in the outside world changes (for example, if it is legislated that pi actually should be 3.975), 
+	you will need to recompile any classes that use this constant to get the current value.
+	
+	

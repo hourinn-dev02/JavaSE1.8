@@ -24,6 +24,7 @@ public class ThisFun {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		new Rectangle();
+		System.out.println(Bicycle.numberOfBicycles);
 	}
 
 }

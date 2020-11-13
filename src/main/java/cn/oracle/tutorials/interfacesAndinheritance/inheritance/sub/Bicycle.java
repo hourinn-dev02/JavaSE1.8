@@ -31,8 +31,7 @@ public class Bicycle {
         speed += increment;
     }
 
-	@Override
-	public String toString() {
+	public String printDescription() {
 		return "Bicycle [cadence=" + cadence + ", speed=" + speed + ", gear=" + gear + "]";
 	}
 }

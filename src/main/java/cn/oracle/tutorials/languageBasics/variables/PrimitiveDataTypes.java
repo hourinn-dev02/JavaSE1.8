@@ -38,7 +38,41 @@ public class PrimitiveDataTypes {
 		characterAndStringLiterals();
 	}
 	
+	static void printDefaultValue() {
+		
+		// the compiler never assigns a default value to an uninitialized local variable Accessing an uninitialized local variable will result in a compile-time error.
+		byte a;
+		short  b;
+		int c;
+		long d = 100;
+		float e = 0.0f;
+		double f = 0.0D;
+		char g ;
+		boolean h;
+		
+		
+//		System.out.println(a);
+//		System.out.println(b);
+//		System.out.println(c);
+//		System.out.println(d);
+//		System.out.println(e);
+//		System.out.println(f);
+//		System.out.println(g);
+//		System.out.println(h);
+		
+		System.out.println("Byte: " + byteDefault);                    	//0
+		System.out.println("short: " + shortDefault);					//0
+		System.out.println("int: " + intDefault);						//0
+		System.out.println("long: " + longDefault);						//0L
+		System.out.println("float: " + floatDefault);                   //0.0f
+		System.out.println("double: " + doubleDefault);					//0.0d
+		System.out.println("boolean: " + booleanDefault);				//false
+		System.out.println("char: " + charDefault);						//'\u0000'
+	}
+	
 	static void bytePrint() {
+		
+		
 		byte byteMin = Byte.MIN_VALUE;
 		byte byteMax = Byte.MAX_VALUE;
 		System.out.println("minimum of byte:"+ byteMin + " && maximum of byte:" + byteMax);
@@ -81,20 +115,6 @@ public class PrimitiveDataTypes {
 		char charMin = '\u0000';
 		char charMax = '\uffff';
 		System.out.println("minimum of char:"+ charMin + " && maximum of char:" + charMax);
-	}
-	
-	static void printDefaultValue() {
-		
-		System.out.println("Byte: " + byteDefault);
-		System.out.println("short: " + shortDefault);
-		System.out.println("int: " + intDefault);
-		System.out.println("long: " + longDefault);
-		System.out.println("float: " + floatDefault);
-		System.out.println("double: " + doubleDefault);
-		System.out.println("boolean: " + booleanDefault);
-		System.out.println("char: " + charDefault);
-		
-		
 	}
 	
 	

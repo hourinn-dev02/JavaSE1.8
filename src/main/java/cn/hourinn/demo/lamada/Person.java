@@ -27,7 +27,6 @@ public class Person {
 		list.add(new Person("kasumi",25,Sex.FEMALE,"kasumi@gmail.com", LocalDate.now()));
 		list.add(new Person("nao",30,Sex.FEMALE, "nao@gmail.com",LocalDate.now()));
 		return list;
-		
 	}
 	
 
